@@ -2,8 +2,10 @@
 #include <iostream>
 #include <stdexcept>
 
+
 namespace my_lub
 {
+
     int Rational::gcd(int x, int y) 
     {
         while (x > 0 && y > 0) 
@@ -34,7 +36,7 @@ namespace my_lub
         denominator = 1;
     }
 
-    Rational::Rational(int n, int d) 
+    Rational::Rational(int n, int d)
     {
         if (d == 0) 
         {
@@ -46,29 +48,29 @@ namespace my_lub
         normalize();
     }
 
-    Rational::Rational(int n) 
+    Rational::Rational(int n)
     {
         numerator = n;
         denominator = 1;
     }
 
-    int Rational::getNumerator() const 
+    int Rational::getNumerator() const
     {
         return numerator;
     }
 
-    void Rational::setNumerator(int n) 
+    void Rational::setNumerator(int n)
     {
         numerator = n;
         isNormalized = false;
     }
 
-    int Rational::getDenominator() const 
+    int Rational::getDenominator() const
     {
         return denominator;
     }
 
-    void Rational::setDenominator(int d) 
+    void Rational::setDenominator(int d)
     {
         if(d == 0)
         {
@@ -78,7 +80,7 @@ namespace my_lub
         isNormalized = false;
     }
 
-    void Rational::print() 
+    void Rational::print()
     {
         if (numerator == 0 || denominator == 1) 
         {
@@ -137,7 +139,6 @@ namespace my_lub
         result.setDenominator(denominator * right_number.getDenominator());
         return result;
     }
-
 
     Rational Rational::operator*(const Rational& right_number) const
     {
